@@ -22,9 +22,11 @@ class Directory extends Component {
     return (
       <div className="directory">
         <SearchBar />
-        {items.map((item, i) => (
-          <CountryItem key={i} data={item} />
-        ))}
+        <div className="country-wrapper">
+          {items.map((item, i) => (
+            <CountryItem key={i} data={item} />
+          ))}
+        </div>
       </div>
     );
   }

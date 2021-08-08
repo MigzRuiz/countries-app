@@ -10,7 +10,7 @@ const CountryItem = ({ data }) => {
         <h3>{data.name}</h3>
         <div>
           <span className="item__label">Population: </span>
-          {data.population}
+          {data.population.toLocaleString()}
         </div>
         <div>
           <span className="item__label">Region: </span>
