@@ -17,11 +17,19 @@ class Directory extends Component {
       .then((json) => this.setState({ items: json }));
   }
 
+  handleChange(e) {
+    e.preventDefault();
+
+    const { value } = e.target;
+
+    this.setState({ input: value });
+  }
+
   render() {
     const { items } = this.state;
     return (
       <div className="directory">
-        <SearchBar />
+        <SearchBar handleChange={this.handleChange} />
         <div className="country-wrapper">
           {items.map((item, i) => (
             <CountryItem key={i} data={item} />

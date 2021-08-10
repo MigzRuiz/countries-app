@@ -7,7 +7,7 @@ const CountryItem = ({ data }) => {
       <img className="item__flag" src={data.flag} alt="flag"></img>
 
       <div className="item__info">
-        <h3>{data.name}</h3>
+        <h2>{data.name}</h2>
         <div>
           <span className="item__label">Population: </span>
           {data.population.toLocaleString()}
